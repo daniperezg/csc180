@@ -1,4 +1,8 @@
 # Ignore Python virtual environment
-venv/
+.venv/
 
-exercise6/OANH - Lab_6_python_testscore.ipynb
+# Ignore macOS system files
+.DS_Store
+
+# ignore other files 
+exercise6/Lab_6_python_testscore.ipynb
