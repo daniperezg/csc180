@@ -1,0 +1,4 @@
+# Ignore Python virtual environment
+venv/
+
+exercise6/OANH - Lab_6_python_testscore.ipynb
