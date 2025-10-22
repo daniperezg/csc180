@@ -1,0 +1,16 @@
+1. linear regression on homeprices.csv. saved model 
+2. linear regression on canada_per_capita_income.csv. saved model using joblib 
+3. linear regression on homePricesMedian.csv. filled NaN
+4. linear regression on hiring.csv. word2num to convert words to numbers. fillna() for NaN
+5. linear regression on test_scores.csv
+6. gradient descent on test_scores.csv. gradient is which way to walk, descent is getting closer to model, and learning rate is how big the steps are
+7. plot data. dummy variables. one hot encoding 
+8. tkitner gui 
+9. plot data for insurance_data.csv. shape, split data. logistic regression
+10. describe data, mean of data to get inferences. plot bar chart of HR_comma_sep.csv. dummy variable, logistic regression
+11. logistic regression on digits. confusion matrix 
+12. logistic regression on iris. confusion matrix
+13. label encode (adds order). tree model on titanic.csv
+14. PCA on digits
+15. SVM, Logistic, Random forest on heart.csv
+16. plot iris, SVM
