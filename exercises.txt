@@ -11,6 +11,13 @@
 11. logistic regression on digits. confusion matrix 
 12. logistic regression on iris. confusion matrix
 13. label encode (adds order). tree model on titanic.csv
+
 14. PCA on digits
 15. SVM, Logistic, Random forest on heart.csv
 16. plot iris, SVM
+17. Kfold on SVM, Random Forrest, and Logistic Regression (Random Forrest best accuracy)
+17.2. SVM, Random Forrest Classifier, Logisitic Regression, Guassian, multinomial, decision tree on digits dataset. 
+        k fold found SVM was best, and grid search found the best parameters fir SVM
+18. L1(Lasso) Regularization and L2(Ridge) Regulartization 
+19. KNN on digits and use confusion matrix 
+20. Scaling: min-max vs z-score with elbow plot. used kmeans 

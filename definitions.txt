@@ -1,0 +1,101 @@
+PCA (Principal Component Analysis):
+    - A way to: Compress your data into fewer features (called principal components), 
+    while keeping as much of the important information (variance) as possible.
+    - High level how it works: 
+        Standardize the features.
+        Compute the covariance matrix of the data. (How features vary)
+        Find eigenvalues and eigenvectors of the covariance matrix. (Direction and variance)
+        Sort components by eigenvalue (from biggest to smallest)
+        Pick the top k components and project your data onto them
+
+    - PCA reduces dimensions by creating new features (called principal components) that are combinations of the original columns.
+    - It finds the directions in the data where the variance is greatest, then projects the data onto the top k of those directions.
+    - This allows us to replace many original features with fewer, more informative ones.
+
+L1 (Lasso):
+    - adds a penalty based on the absolute value of weights
+    - tries to push many coefficients to exactly 0
+    - When to use it:
+        - When you have many features
+        - When you suspect some features are irrelevant
+        - When you want a simpler, more interpretable model
+    - Models used with: Logisitic Regresstion, Linear Regression
+
+L2 (Ridge):
+    - adds a penalty based on the square of weights
+    - spreads penalty across all weights rather than killing them
+    - tries to shrink weights, but not to zero
+    - When to use it:
+        - When your dataset has multicollinearity (correlated features)
+        - When you don’t want to drop features
+        - When performance is more important than interpretability
+    - Models used with: Linear Regression, Logistic Regression, SVM, Neural Networks 
+
+Random Forrest: 
+    - a machine learning model that makes predictions using many decision trees
+        - a decision tree is like a flowchart (“if feature > value then go left, else go right”)
+        - A forest is a collection of many such trees
+    - Models used with: Regression (predict housing prices or stock trends), Classification (predict diagnoses or email is spam)
+    - Example: Imagine 100 doctors each giving a diagnosis: One doctor (a decision tree) might be wrong sometimes. But if 100 doctors vote (a forest), the answer is usually more accurate.
+    - Hard to overfit 
+    
+Kfold:
+    - a method to evaluate a model by splitting the training data into K equal parts (folds). 
+    The model trains on K-1 folds and tests on the remaining fold, repeating this process K times so every part is used for testing once. 
+    The final score is the average of all K test results, giving a more reliable estimate of model performance.
+    - No data is wasted
+
+Z-score:
+    - used to standardize(scale) data 
+        - mean = 0
+        - standard deviation =1
+    
+KNN:
+    - KNN is a simple algorithm that predicts a label by looking at the K closest data points. 
+    It uses distance to find similar examples and bases its prediction on the majority class (classification) or average value (regression). 
+    It’s a lazy, instance-based method because it doesn’t build a model — it just stores the data and compares new points to it.
+
+K Means:
+    - K-Means is an unsupervised clustering algorithm that partitions data into K groups by repeatedly assigning points to the nearest centroid and updating those centroids to the mean of the assigned points. 
+    It groups similar points together without using labels
+
+ANN (Artificial Neural Network):
+    - An ANN is a machine learning model made of layers of neurons that pass information forward. 
+    Each neuron applies simple math, and the network learns by adjusting the weights between neurons. 
+    Over time, it learns to recognize complex patterns from the data.
+
+Activation Functions Do (ReLU, Sigmoid, etc.):
+    - Activation functions add non-linearity to a neural network so it can learn complex patterns.
+    - If we didn’t use them, a neural network would just behave like linear regression, no matter how many layers it had.
+    - summarized: Activation functions allow neural networks to learn non-linear patterns by deciding how much signal each neuron passes forward.
+
+Back Propagation: 
+    - sends the prediction error backward through the network and adjusts the weights so the model learns to improve.
+    - gradients, which tell each weight: 1. how much it contributed to the error 2. how much it should change
+
+CNNs (Convolutional Neural Networks):
+    - CNNs are neural networks designed to understand images by detecting patterns like edges, textures, and shapes.
+    - They do this using convolutional filters that slide over an image and highlight important features.
+    - Instead of looking at all pixels at once, CNNs:
+        - look at small regions
+        - learn simple patterns (edges) in early layers
+        - combine them into complex patterns (faces, objects) in deeper layers
+
+RNNs (Recurrent Neural Networks):
+    - RNNs are neural networks designed for sequence data, where the order matters.
+    - They have “memory” — they keep information from earlier steps and use it to influence later predictions
+    - Anology: To understand a sentence, you must remember previous words.
+    - RNNs are neural networks that remember previous inputs, making them ideal for text, speech, and any data that comes in sequences.
+
+NLP (Natural Language Processing):
+    - NLP teaches computers to work with human language so they can understand and generate text
+
+LSTM (Long Short-Term Memory Network):
+    - LSTM is a special type of RNN (Recurrent Neural Network) designed to handle long sequences and remember important information over time using memory gates 
+    - Because text is sequential, and LSTMs are good at processing long sequences while keeping important information.
+
+GRU (Gated Recurrent Unit):
+    - A GRU is a type of recurrent neural network (RNN), similar to an LSTM, 
+    designed to handle sequence data and solve the problem of remembering information over long time steps.
+    - Simpler than LSTM, they have an update gate and reset gate 
+    - faster bc 2 gates instead of 3
